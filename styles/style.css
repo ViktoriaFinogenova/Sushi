@@ -42,3 +42,30 @@ header {
 h1 {
     margin: 0;
 }
+
+.header-text {
+    padding-top: 150px;
+}
+
+#header-title {
+    max-width: 43%;
+    padding-top: 150px;
+    margin-left: 8.3%;
+    background: #fff;
+    padding: 15px;
+    text-transform: uppercase;
+    color: #171717;
+    letter-spacing: 0.179487em;
+    font-size: 2.8em;
+    line-height: 1em;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#header-headline {
+    margin-top: 32px;
+    margin-left: 8.3%;
+    background: #fff;
+    padding: 15px;
+    max-width: 22%;
+}
