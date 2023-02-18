@@ -1,3 +1,8 @@
+
+/******************************
+Common Styles
+*******************************/
+
 * {
     margin: 0;
     padding: 0;
@@ -29,18 +34,36 @@ body {
 [class*="col-"] {
   float: left;
   padding: 15px;
-  border: 1px solid red;
 }
+/* здесь закончила гуглить css-селекторы, не знакомые мне */
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section {
+    padding: 100px 0;
+}
+
+
+/******************************
+Header Styles
+*******************************/
 
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(10, 33, 237, 0.7)), url(../images/header-background-image.jpg);
     height: 100vh;
     background-position: center;
     background-size: cover;
-}
-
-h1 {
-    margin: 0;
 }
 
 .header-text {
@@ -64,7 +87,6 @@ h1 {
     margin-top: 20px;
     margin-left: 8.33%;
     padding: 15px;
-    max-width: 33%;
 }
 
 #logo-text {
@@ -99,7 +121,7 @@ h1 {
 #logo-text a {
     text-decoration: none;
     text-transform: uppercase;
-    color: #81E0FD;;
+    color: #81E0FD;
     letter-spacing: 8px;
     padding: 20px;
 }
@@ -107,4 +129,46 @@ h1 {
 nav {
     height: 70px;
     padding: 25px;
+}
+
+/******************************
+Button Styles
+*******************************/
+
+.button:link,
+.button:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #81E0FD;
+    font-weight: 300;
+    border-radius: 150px;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.button-order:link,
+.button-order:visited {
+    background: #0A21ED;
+    border: 1px solid #0A21ED;
+}
+
+.button-more:link,
+.button-more:visited {
+    border: 1px solid #81E0FD;
+}
+
+.button:hover,
+.button:active {
+    background: #081ABC;
+
+}
+
+.button-order:hover,
+.button-order:active {
+    border: 1px solid #081ABC;
+}
+
+.button-more:hover,
+.button-more:active {
+    border: 1px solid #081ABC;
 }
