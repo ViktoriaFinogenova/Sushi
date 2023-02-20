@@ -33,7 +33,7 @@ body {
 
 [class*="col-"] {
   float: left;
-  padding: 15px;
+  padding: 3%;
 }
 /* здесь закончила гуглить css-селекторы, не знакомые мне */
 
@@ -50,10 +50,44 @@ h2 {
     margin-bottom: 30px;
 }
 
-section {
-    padding: 100px 0;
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-align: center;
+    font-size: 80%;
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
 
+h2:after{
+    display: block;
+    height: 2px;
+    background-color: #81E0FD;
+    content: " ";
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+section {
+    padding: 100px 0;
+    clear: both;
+}
+
+.float-clearing {
+    zoom: 1;
+}
+
+.float-clearing:after {
+    zoom: 1;
+    content: " ";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
 
 /******************************
 Header Styles
@@ -112,10 +146,18 @@ header {
     font-size: 0.8em;
 }
 
-#main-nav li a {
+#main-nav li a:link,
+#main-nav li a:visited {
     text-decoration: none;
     text-transform: uppercase;
-    color: #81E0FD;;
+    color: #81E0FD;
+    opacity: 0.5;
+}
+
+#main-nav li a:hover,
+#main-nav li a:active {
+    opacity: 1;
+    
 }
 
 #logo-text a {
@@ -171,4 +213,130 @@ Button Styles
 .button-more:hover,
 .button-more:active {
     border: 1px solid #081ABC;
+}
+
+/******************************
+Features Styles
+*******************************/
+
+#headline-text {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 100%;
+}
+
+.features-icon {
+    font-size: 300%;
+    color: #81E0FD;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 85%;
+    
+}
+
+/******************************
+Food Images Styles
+*******************************/
+
+.images-container {
+    list-style: none;
+    width: 100%;
+}
+
+.images-container li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.food-image {
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.food-image img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.2);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.food-image img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/******************************
+How To Order Styles
+*******************************/
+
+#phone-image {
+    width: 100%;
+}
+
+#phone-image-container {
+    margin-left: 10%;
+    margin-right: 3%;
+}
+
+.order-step {
+    margin-top: 100px;
+}
+
+.order-step div {
+    color: #81E0FD;
+    border: 2px solid #81E0FD;
+    width: 50px;
+    height: 50px;
+    border-radius: 150px;
+    text-align: center;
+    padding: 5px;
+    font-size: 150%;
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+}
+
+.order-step p {
+    padding-top: 5px;
+}
+
+.app-button img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.order-step:last-of-type {
+    margin-bottom: 100px;
+}
+
+/******************************
+Cities Styles
+*******************************/
+
+.col-3 img {
+    width: 100%;;
+}
+
+.city-info {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 70%;
+}
+
+.info-icon {
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    color: #81E0FD;
+}
+
+#cities-section {
+    background-color: #F4EDED;
 }
