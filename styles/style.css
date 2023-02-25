@@ -35,7 +35,6 @@ body {
   float: left;
   padding: 3%;
 }
-/* здесь закончила гуглить css-селекторы, не знакомые мне */
 
 h1 {
     margin: 0;
@@ -89,6 +88,11 @@ section {
     visibility: hidden;
 }
 
+section p,
+#contact-form {
+    font-size: 85%;
+}
+
 /******************************
 Header Styles
 *******************************/
@@ -98,6 +102,7 @@ header {
     height: 100vh;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .header-text {
@@ -157,7 +162,6 @@ header {
 #main-nav li a:hover,
 #main-nav li a:active {
     opacity: 1;
-    
 }
 
 #logo-text a {
@@ -178,7 +182,8 @@ Button Styles
 *******************************/
 
 .button:link,
-.button:visited {
+.button:visited,
+input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     text-decoration: none;
@@ -189,7 +194,8 @@ Button Styles
 }
 
 .button-order:link,
-.button-order:visited {
+.button-order:visited,
+input[type=submit] {
     background: #0A21ED;
     border: 1px solid #0A21ED;
 }
@@ -200,13 +206,17 @@ Button Styles
 }
 
 .button:hover,
-.button:active {
+.button:active,
+input[type=submit]:hover,
+input[type=submit]:active {
     background: #081ABC;
 
 }
 
 .button-order:hover,
-.button-order:active {
+.button-order:active,
+input[type=submit]:hover,
+input[type=submit]:active {
     border: 1px solid #081ABC;
 }
 
@@ -214,6 +224,8 @@ Button Styles
 .button-more:active {
     border: 1px solid #081ABC;
 }
+
+
 
 /******************************
 Features Styles
@@ -229,11 +241,6 @@ Features Styles
     font-size: 300%;
     color: #81E0FD;
     margin-bottom: 20px;
-}
-
-section p {
-    font-size: 85%;
-    
 }
 
 /******************************
@@ -297,7 +304,7 @@ How To Order Styles
     padding: 5px;
     font-size: 150%;
     display: inline-block;
-    float: left;
+    float: left; 
     margin-right: 20px;
 }
 
@@ -340,3 +347,72 @@ Cities Styles
 #cities-section {
     background-color: #F4EDED;
 }
+
+/******************************
+Feedback Styles
+*******************************/
+
+#feedback-section {
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/feedback-background.jpg);
+    background-size: cover;
+    /* Сама добавила height и background-position*/
+    /* height: 100vh;
+    background-position: center; */
+    color:#fff;
+    background-attachment: fixed;
+}
+
+blockquote {
+    font-style: italic;
+    font-weight: 300;
+    line-height: 150%;
+}
+
+cite {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+blockquote div:before {
+    content: "\201C";
+    font-size: 300%;
+}
+
+blockquote:after {
+    content: "\201D";
+    font-size: 300%;
+    line-height: 150%;
+}
+
+cite img {
+    display: inline-block;
+    width: 200px; /*Изначальная ширина 100px*/
+    border: 2px solid #81E0FD;
+    border-radius: 50%;
+}
+
+/******************************
+Contact form Styles
+*******************************/
+
+#contact-form {
+    width: 40%; /*По курсам 50%*/
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #F4EDED;
+}
+
+textarea {
+    height: 150px;
+}
+
