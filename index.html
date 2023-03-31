@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Океан суши</title>
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/animate.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,32 +18,36 @@
 
 <body>
 
-    <header>
-
-        <img src="images/sushi-logo.png" id="logo-imgage">
+    <header id="header">
 
         <nav>
 
-            <p id="logo-text"><a href="#">Океан Суши</a></p>
+            <img src="images/sushi-logo.png" id="logo-imgage">
+
+            <p id="logo-text"><a href="#header">Океан Суши</a></p>
+
+            <!-- <div class="float-clearing"></div> -->
 
             <ul id="main-nav">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Меню</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Заказ онлайн</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#header">Главная</a></li>
+                <li><a href="#food-images-section">Меню</a></li>
+                <li><a href="#feedback-section">О нас</a></li>
+                <li><a href="#how-to-order-section">Заказ онлайн</a></li>
+                <li><a href="#contact-form-section">Контакты</a></li>
             </ul>
+
+            <a class="mobile-nav-icon"><ion-icon name="menu-outline"></ion-icon></a>
 
         </nav>
 
-        <div class="header-text">
+        <div id="header-text">
 
             <h1 id="header-title">В нашем океане суши на любой вкус</h1>
 
 
             <div id="header-buttons">
 
-                <a href="#" class="button button-order">Сделать заказ</a>
+                <a href="#" class="button button-order anim4">Сделать заказ</a>
                 <a href="#" class="button button-more">Узнать больше</a>
 
             </div>
@@ -57,7 +62,7 @@
             <p id="headline-text">Каждое блюдо - это изысканное творение от наших поваров-суши. Всё из самых свежих
                 ингредиентов.</p>
         </div>
-        <div class="col-3">
+        <div class="col-3 anim1">
             <ion-icon name="restaurant" class="icon ion-md-restaurant features-icon"></ion-icon>
             <p>
                 С 2001 года Океан Суши предлагает выбор инновационных вариаций классики японской кухни. Деликатесы
@@ -65,7 +70,7 @@
                 множества ароматных закусок, первоклассных суши и сашими, до знаменитых воков и раменов.
             </p>
         </div>
-        <div class="col-3">
+        <div class="col-3 anim1">
             <ion-icon name="tv-outline" class="icon ion-md-tv features-icon"></ion-icon>
             <p>
                 Океан Суши был показан на телевизионном канале "НТВ" как один из лучших ресторанов России. Кроме
@@ -73,13 +78,13 @@
                 изданиях.
             </p>
         </div>
-        <div class="col-3">
+        <div class="col-3 anim1">
             <ion-icon name="people" class="icon ion-md-tv features-icon"></ion-icon>
             <p>
                 На обед это отличное место, чтобы быстро перекусить или просто расслабиться и пообщаться с друзьями.
             </p>
         </div>
-        <div class="col-3">
+        <div class="col-3 anim1">
             <ion-icon name="happy-outline" class="icon ion-md-contacts features-icon"></ion-icon>
             <p>
                 На ужин это модная, веселая и шумная обстановка, где можно заранее развлечься с друзьями друзьями перед
@@ -141,7 +146,7 @@
     <section id="cities-section">
         <h2>Мы находимся в следующих городах</h2>
         <div class="float-clearing">
-            <div class="col-3">
+            <div class="col-3 anim2">
                 <img src="images/kharkiv.jpg" alt="">
                 <h3>Харьков</h3>
                 <div class="city-info">
@@ -157,7 +162,7 @@
                     sushi-ocean.kh@gmail.com
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 anim2">
                 <img src="images/kiyev.jpg" alt="">
                 <h3>Киев</h3>
                 <div class="city-info">
@@ -173,7 +178,7 @@
                     sushi-ocean.ki@gmail.com
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 anim2">
                 <img src="images/lviv.jpg" alt="">
                 <h3>Львов</h3>
                 <div class="city-info">
@@ -189,7 +194,7 @@
                     sushi-ocean.la@gmail.com
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-3 anim2">
                 <img src="images/odessa.jpg" alt="">
                 <h3>Одесса</h3>
                 <div class="city-info">
@@ -210,7 +215,7 @@
 
     <section id="how-to-order-section">
         <h2>У нас есть доставка!</h2>
-        <div class="col-4" id="phone-image-container">
+        <div class="col-4 anim3" id="phone-image-container">
             <img src="images/iphone-160307_1280.png" alt="" id="phone-image">
         </div>
         <div class="col-5">
@@ -259,9 +264,8 @@
                     <div>
                         В ресторане есть прекрасный и уютный банкетный зал. 12 человек будут себя чувствовать здесь
                         комфортно.
-                        Кухня как всегда была на высоте. Отличный сервис. К сожалению, бару необходимо подкреплять запас
-                        в
-                        ассортименте винной карты. Отдельная благодарность за предоставление 10% скидки по случаю дня
+                        Кухня как всегда была на высоте. Отличный сервис. Отдельная благодарность за предоставление 10%
+                        скидки по случаю дня
                         рождения.
                     </div>
                 </blockquote>
@@ -368,5 +372,9 @@
 <!-- Скрипты для иконок с ionic.io -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="scripts/jquery.waypoints.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
 
 </html>
