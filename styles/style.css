@@ -614,6 +614,11 @@ Media Query Styles
         display: block;
     }
 
+    #sticky-nav #main-nav li a:hover,
+    #sticky-nav #main-nav li a:active {
+    border-bottom: 0;
+}
+
 }
 
 /******************************

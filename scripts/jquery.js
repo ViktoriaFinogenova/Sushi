@@ -78,4 +78,25 @@ $(document).ready(function () {
         offset: 60
     });
 
+    // mobile-nav
+    $(".mobile-nav-icon").click(function () {
+
+        var icon = $(".mobile-nav-icon ion-icon");
+
+        if (icon[0].attributes.name.nodeValue === "menu-outline") {
+            icon.attr("name", "close-outline");
+            $("nav").animate({
+                height: "300px"
+            }, 300);
+        } else {
+            icon.attr("name", "menu-outline");
+            $("nav").animate({
+                height: "70px"
+            }, 300);
+        }
+        $("#main-nav").slideToggle(300);
+
+
+    });
+
 });
